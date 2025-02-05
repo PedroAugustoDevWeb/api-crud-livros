@@ -1,5 +1,6 @@
 package api.crud.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,20 +14,24 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "tb_livros")
+@Table(name = "livros_tb")
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Livros {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "desc")
     private String desc;
 
+    @Column(name = "ano_lanca")
     private int ano_lanca;
 
     @ManyToOne

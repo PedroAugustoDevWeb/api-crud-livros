@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 
 @RestController
-@RequestMapping("/livros")
+@RequestMapping("api/livros")
 public class LivroController {
     
     @GetMapping
